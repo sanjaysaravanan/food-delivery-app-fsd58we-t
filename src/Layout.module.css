@@ -10,14 +10,18 @@
   background-color: white;
 }
 
-.addressOverlay {
+.slide {
+  transition: all 250ms ease-in-out;
+  z-index: 99999;
   position: fixed;
   top: 0px;
   height: 100vh;
-  min-width: 300px;
-  animation: from-left 250ms ease-in-out;
   background-color: white;
-  z-index: 9999;
+  overflow: auto;
+}
+
+.signForm {
+  right: 0px;
 }
 
 .greyOverlay {

@@ -1,5 +1,5 @@
 // Simple Layout with SideBar for Address, Login/Sign Up
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import styles from "./Layout.module.css";
 import { useContext, useState } from "react";
 import AuthTabs from "./pages/AuthTabs";
@@ -37,6 +37,10 @@ const Layout = () => {
     <>
       <header className={styles.header}>
         <button onClick={handleAddressOpen}>Change Address</button>
+        <Link to="/cart">
+          <button>Go To Cart</button>
+        </Link>
+
         <button onClick={state.isAuthenticated ? handleLogout : handleSignForm}>
           {state.isAuthenticated ? "Logout" : "Sign In"}
         </button>
